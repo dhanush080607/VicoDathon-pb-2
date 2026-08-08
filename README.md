@@ -1,1133 +1,1386 @@
-# 🎙️ InterviewOS AI — The Interview Agent
+<div align="center">
+
+# 🎙️ InterviewOS AI
+
+### **Don't Build the Interview. Build the Interviewer.**
+
+<p>
+  <strong>An adaptive AI-powered technical interview platform that listens, remembers, adapts, probes, and evaluates.</strong>
+</p>
+
+<br/>
+
+<a href="https://vico-dathon-pb-2.vercel.app/">
+<img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-InterviewOS%20AI-7C3AED?style=for-the-badge" alt="Live Demo"/>
+</a>
+&nbsp;
+<a href="https://github.com/dhanush080607/VicoDathon-pb-2">
+<img src="https://img.shields.io/badge/💻%20GITHUB-Repository-111827?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+&nbsp;
+<a href="https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/technical-spec.md">
+<img src="https://img.shields.io/badge/📜%20TECHNICAL%20SPEC-Read-06B6D4?style=for-the-badge" alt="Technical Specification"/>
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/VicoDathon-Problem%20Statement%202-8B5CF6?style=flat-square" alt="Hackathon"/>
+<img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=111827" alt="React"/>
+<img src="https://img.shields.io/badge/TypeScript-Type--Safe-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/TanStack-Start-FF4154?style=flat-square" alt="TanStack"/>
+<img src="https://img.shields.io/badge/Tailwind-CSS%204-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+<img src="https://img.shields.io/badge/Framer-Motion-EF008C?style=flat-square" alt="Framer Motion"/>
+
+<br/><br/>
+
+> **Real interviews don't follow scripts. Real interviewers listen, adapt, and go deeper.**
+
+</div>
 
 ---
 
-## 🌌 Live Experience
+# ⚡ What is InterviewOS AI?
 
-### 🚀 [Open InterviewOS AI →](https://vico-dathon-pb-2.vercel.app/)
+**InterviewOS AI** transforms technical interview preparation into a conversational AI interviewer experience.
 
-| Resource             | Link                                                                                |
-| -------------------- | ----------------------------------------------------------------------------------- |
-| 🟣 Live Application  | [vico-dathon-pb-2.vercel.app](https://vico-dathon-pb-2.vercel.app/)                 |
-| 💻 GitHub Repository | [VicoDathon-pb-2](https://github.com/dhanush080607/VicoDathon-pb-2)                 |
-| 📜 Commit History    | [View Commits](https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/)      |
-| 🤖 AI Usage Log      | [PROMPTS.md](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md) |
-| 👤 LinkedIn          | [H Dhanush](https://www.linkedin.com/in/h-dhanush-189565327/)                       |
+It isn't a static questionnaire.
 
----
-
-# 🧠 What Is InterviewOS AI?
-
-**InterviewOS AI** is an adaptive technical interview experience designed to simulate a realistic AI-powered interviewer.
-
-Instead of presenting candidates with a fixed list of questions, the system is designed around a more natural interview loop:
+It behaves like an interviewer that:
 
 ```text
-                 ┌─────────────────────┐
-                 │   CANDIDATE PROFILE  │
-                 └──────────┬──────────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │   LEARNING JOURNEY  │
-                 └──────────┬──────────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │   START INTERVIEW   │
-                 └──────────┬──────────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │   ASK QUESTION      │
-                 └──────────┬──────────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │   CANDIDATE ANSWER  │
-                 └──────────┬──────────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │   ANALYZE RESPONSE  │
-                 └──────────┬──────────┘
-                            ↓
-                    ┌───────┴───────┐
-                    ↓               ↓
-               GO DEEPER         CLARIFY
-                    ↓               ↓
-                    └───────┬───────┘
-                            ↓
-                 ┌─────────────────────┐
-                 │  FOLLOW-UP QUESTION │
-                 └──────────┬──────────┘
-                            ↓
-                       🔄 CONTINUE
-                            ↓
-                 ┌─────────────────────┐
-                 │  FINAL EVALUATION   │
-                 └─────────────────────┘
+                 ┌───────────────┐
+                 │    LISTEN     │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │  UNDERSTAND   │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │    ANALYSE    │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │     ADAPT     │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │  GO DEEPER    │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │   EVALUATE    │
+                 └───────┬───────┘
+                         ↓
+                 ┌───────────────┐
+                 │    IMPROVE    │
+                 └───────────────┘
+```
+
+Every candidate answer can influence what happens next.
+
+Strong answers can trigger deeper probes.
+
+Partial answers can trigger clarification.
+
+Weak answers can return the conversation toward fundamentals.
+
+And throughout the interview, context is maintained.
+
+---
+
+# 🚀 Live Experience
+
+<div align="center">
+
+## [🚀 Open InterviewOS AI](https://vico-dathon-pb-2.vercel.app/)
+
+</div>
+
+| Resource                   | Link                                                                                              |
+| -------------------------- | ------------------------------------------------------------------------------------------------- |
+| 🚀 Live Application        | [Open InterviewOS AI](https://vico-dathon-pb-2.vercel.app/)                                       |
+| 💻 GitHub Repository       | [VicoDathon-pb-2](https://github.com/dhanush080607/VicoDathon-pb-2)                               |
+| 📜 Technical Specification | [technical-spec.md](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/technical-spec.md) |
+| 🤖 AI Usage Log            | [PROMPTS.md](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)               |
+| 📈 Commit History          | [View Commits](https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/)                    |
+| 👤 LinkedIn                | [H Dhanush](https://www.linkedin.com/in/h-dhanush-189565327/)                                     |
+
+---
+
+# 🧠 Why InterviewOS?
+
+Traditional interview preparation is often built around memorizing questions.
+
+InterviewOS focuses on **interviewer behaviour**.
+
+| Traditional Preparation | InterviewOS AI                 |
+| ----------------------- | ------------------------------ |
+| Static question banks   | 🧠 Adaptive conversation       |
+| Memorized answers       | 🎯 Reasoning-focused responses |
+| Fixed question sequence | 🔄 Dynamic follow-ups          |
+| No conversation memory  | 🗂️ Interview memory           |
+| Generic feedback        | 📊 Structured assessment       |
+| Fixed curriculum        | 📚 Candidate-aware curriculum  |
+| Practice questions      | 🎙️ Interviewer experience     |
+
+### The difference
+
+```text
+TRADITIONAL
+
+Question
+   ↓
+Answer
+   ↓
+Next Question
+   ↓
+End
+```
+
+```text
+INTERVIEWOS AI
+
+Question
+   ↓
+Candidate Answer
+   ↓
+Understand
+   ↓
+Analyse
+   ↓
+Remember Context
+   ↓
+Decide
+   ↓
+Follow-up / New Topic
+   ↓
+Evaluate
+   ↓
+Improve
 ```
 
 ---
 
-# 🎯 THE PROBLEM
+# ✨ Core Features
 
-The AI Cohort teaches learners modern AI engineering concepts.
+<table>
+<tr>
+<td width="50%">
 
-But completing a learning journey doesn't automatically mean someone can **explain the systems they built under interview pressure**.
+### 🤖 Adaptive Interviewer
 
-### Traditional preparation
+Questions are selected from curriculum context and can adapt based on previous responses.
 
-```text
-Learn
-  ↓
-Watch Tutorials
-  ↓
-Build Project
-  ↓
-Read Question Bank
-  ↓
-Memorize Answers
-  ↓
-Technical Interview 😰
-```
+</td>
 
-The problem is that technical interviews are not simply question-answer tests.
+<td width="50%">
 
-Interviewers ask:
+### 🧠 Conversation Memory
 
-> Why did you choose this architecture?
+The session remembers covered topics, strong signals, probing areas, and unassessed topics.
 
-> What happens when it fails?
+</td>
+</tr>
 
-> How would you scale it?
+<tr>
+<td>
 
-> What trade-offs did you consider?
+### 🔄 Adaptive Follow-ups
 
-> How would you improve it in production?
+Follow-up and context-probe questions allow the interview to go deeper instead of blindly moving through a question list.
 
----
+</td>
 
-# 💡 THE INTERVIEWOS APPROACH
+<td>
 
-InterviewOS turns interview preparation into an **interactive technical conversation**.
+### 🎯 Curriculum Intelligence
 
-```text
-        LEARN
-          ↓
-        BUILD
-          ↓
-       EXPLAIN
-          ↓
-       DEFEND
-          ↓
-      INTERVIEW
-          ↓
-      ANALYSE
-          ↓
-      FEEDBACK
-          ↓
-       IMPROVE
-          ↓
-      INTERVIEW AGAIN
-```
+Questions are grounded in the 31-day AI Cohort curriculum and candidate mission history.
 
-### The goal:
+</td>
+</tr>
 
-# **Build the interviewer, not the interview.**
+<tr>
+<td>
 
----
+### 📊 Interview Progress
 
-# 🧬 ADAPTIVE INTERVIEWING
+Question progress and curriculum-day coverage remain visible throughout the interview.
 
-A normal question bank follows a fixed path.
+</td>
 
-```text
-Q1 → Q2 → Q3 → Q4 → Q5 → Q6
-```
+<td>
 
-InterviewOS is designed around an adaptive path:
+### 📈 Structured Assessment
 
-```text
-                     QUESTION
-                         │
-                         ▼
-                     ANSWER
-                         │
-                         ▼
-                ┌────────────────┐
-                │ RESPONSE       │
-                │ UNDERSTANDING  │
-                └───────┬────────┘
-                        │
-             ┌──────────┼──────────┐
-             ↓          ↓          ↓
-          STRONG      PARTIAL     WEAK
-             │          │          │
-             ↓          ↓          ↓
-         DEEP DIVE   CLARIFY    FUNDAMENTAL
-             │          │          │
-             └──────────┼──────────┘
-                        ↓
-                 FOLLOW-UP
-                        │
-                        ▼
-                    NEXT TURN
-```
+Completed interviews produce an overall score, dimensions, strengths, gaps, and a learning plan.
 
-Every answer can influence the direction of the conversation.
+</td>
+</tr>
+
+<tr>
+<td>
+
+### ⚡ Dynamic Experience
+
+Thinking, progress, memory, loading, and completion states update during the interview.
+
+</td>
+
+<td>
+
+### 🎨 Premium Interface
+
+Dark command-center visuals, glass surfaces, gradients, responsive layouts, and Framer Motion transitions.
+
+</td>
+</tr>
+</table>
 
 ---
 
-# 🧠 CONTEXT-AWARE INTERVIEWING
+# 🎙️ The Interview Experience
 
-The interview experience is built around maintaining context.
+## 01 — Candidate Selection
 
-```text
-┌──────────────────────────────────────┐
-│          INTERVIEW CONTEXT           │
-├──────────────────────────────────────┤
-│                                      │
-│  Candidate Profile                   │
-│                                      │
-│  Completed Curriculum Topics         │
-│                                      │
-│  Questions Already Asked              │
-│                                      │
-│  Previous Candidate Answers           │
-│                                      │
-│  Topics Requiring Deeper Probing      │
-│                                      │
-│  Interview Progress                   │
-│                                      │
-└──────────────────┬───────────────────┘
-                   ↓
-            INTERVIEW ENGINE
-                   ↓
-            NEXT QUESTION
-```
+The candidate begins by selecting a learner profile.
 
-This allows the interview to behave more like a conversation than a questionnaire.
+The demo includes four sample candidates:
+
+* Sarah Chen
+* Marcus Lee
+* Priya Nair
+* Diego Alvarez
+
+Each candidate has a distinct learning track and mission history.
 
 ---
 
-# 📚 CURRICULUM-AWARE QUESTIONS
+## 02 — Interview Ready
 
-The challenge provides a structured **31-day AI Cohort curriculum**.
-
-InterviewOS can use the learning journey as the foundation for interview topics.
-
-### Core areas include:
+The selected candidate enters an interview workspace containing:
 
 ```text
-🔎 Retrieval-Augmented Generation
-        ↓
-🗄️ Vector Databases
-        ↓
-✍️ Prompt Engineering
-        ↓
-🤖 Agentic AI
-        ↓
-🔌 Model Context Protocol
-        ↓
-🚀 AI Deployment
-        ↓
-🏗️ Production AI Systems
-```
-
-The interview can move across multiple curriculum areas instead of testing only one isolated concept.
-
----
-
-# 🎙️ THE INTERVIEW EXPERIENCE
-
-## 🟣 01 — Start Interview
-
-The candidate enters the interview experience and receives a personalized technical starting point.
-
-```text
-╭──────────────────────────────────────╮
-│                                      │
-│       🎙️ TECHNICAL INTERVIEW        │
-│                                      │
-│       Welcome to InterviewOS         │
-│                                      │
-│   Your learning journey is ready.   │
-│                                      │
-│        [ START INTERVIEW ]           │
-│                                      │
-╰──────────────────────────────────────╯
+┌─────────────────────────────────────┐
+│          INTERVIEW WORKSPACE        │
+├─────────────────────────────────────┤
+│                                     │
+│  Progress       Curriculum Coverage │
+│                                     │
+│  ────────────────                   │
+│                                     │
+│          AI INTERVIEWER             │
+│                                     │
+│       Current Question              │
+│                                     │
+│  ───────────────────────────────    │
+│                                     │
+│          Answer Composer            │
+│                                     │
+│  Interview Memory                   │
+│                                     │
+└─────────────────────────────────────┘
 ```
 
 ---
 
-# 💬 02 — Technical Question
+## 03 — AI Interviewer
 
-The interviewer presents a technical question based on the candidate's learning context.
+Each question is connected to curriculum context.
 
 ```text
-┌────────────────────────────────────────┐
-│  TECHNICAL INTERVIEW                   │
-│                                        │
-│  QUESTION 04                            │
-│  ────────────────────────────────────  │
-│                                        │
-│  RAG SYSTEM DESIGN                     │
-│                                        │
-│  Explain why a vector database can     │
-│  be useful in a Retrieval-Augmented    │
-│  Generation system.                    │
-│                                        │
-│  What trade-offs would you consider?   │
-│                                        │
-│  ┌──────────────────────────────────┐  │
-│  │ Type your answer...              │  │
-│  │                                  │  │
-│  │                                  │  │
-│  └──────────────────────────────────┘  │
-│                                        │
-│          [ SUBMIT ANSWER ]             │
-│                                        │
-└────────────────────────────────────────┘
+Question
+│
+├── ID
+├── Text
+├── Curriculum Day
+├── Day Title
+├── Topic
+├── Level
+└── Kind
+      ├── primary
+      ├── followup
+      └── context-probe
 ```
 
 ---
 
-# 🧠 03 — RESPONSE ANALYSIS
+## 04 — Candidate Response
 
-The important part isn't simply receiving an answer.
+The candidate submits an answer through the answer composer.
 
-The system needs to understand what the answer means for the next turn.
+Empty responses are rejected:
+
+```text
+400
+empty_answer
+```
+
+---
+
+## 05 — AI Thinking
+
+During processing, the interface communicates that the interviewer is analysing the response.
 
 ```text
 Candidate Answer
-       │
-       ▼
-┌───────────────────────┐
-│ RESPONSE ANALYSIS     │
-├───────────────────────┤
-│ Understanding         │
-│ Technical Depth       │
-│ Reasoning             │
-│ Completeness          │
-│ Confidence             │
-└───────────┬───────────┘
-            ↓
-      INTERVIEW DECISION
+       ↓
+   🧠 ANALYSING
+       ↓
+Response Understanding
+       ↓
+Follow-up Decision
+       ↓
+Next Question
 ```
 
 ---
 
-# 🔥 04 — INTELLIGENT FOLLOW-UPS
+## 06 — Adaptive Follow-up
 
-A strong candidate shouldn't receive the same follow-up as a struggling candidate.
-
-### Strong answer
+The interviewer evaluates the answer and decides what happens next.
 
 ```text
-Candidate demonstrates
-strong understanding
-        ↓
-Ask deeper question
-        ↓
-Explore architecture
-        ↓
-Explore trade-offs
-```
-
-### Partial answer
-
-```text
-Candidate demonstrates
-partial understanding
-        ↓
-Clarify concept
-        ↓
-Ask supporting question
-        ↓
-Continue interview
-```
-
-### Weak answer
-
-```text
-Candidate struggles
-        ↓
-Return to fundamentals
-        ↓
-Check core understanding
-        ↓
-Continue naturally
+                 Candidate Answer
+                        │
+              ┌─────────┼─────────┐
+              ↓         ↓         ↓
+           Probe     Clarify   Continue
+              │         │         │
+              └─────────┼─────────┘
+                        ↓
+                  Next Question
 ```
 
 ---
 
-# 🔄 05 — MULTI-TURN CONVERSATION
+## 07 — Interview Completion
 
-InterviewOS is designed for a continuous interview.
+The interview becomes eligible for completion when:
 
 ```text
-Question 01
+Questions Answered ≥ 8
+
+          AND
+
+Distinct Curriculum Days ≥ 4
+```
+
+---
+
+## 08 — Structured Feedback
+
+The final assessment contains:
+
+* Summary
+* Strengths
+* Knowledge gaps
+* Recommended next steps
+* Overall score
+* Assessment headline
+* Scored dimensions
+* Learning plan
+
+---
+
+# 🔄 Interview Lifecycle
+
+```text
+┌────────────┐
+│   READY    │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│   ASKING   │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ LISTENING  │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ ANALYSING  │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│  ADAPTING  │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ FOLLOW-UP  │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ COMPLETED  │
+└────────────┘
+```
+
+| State        | Meaning                        |
+| ------------ | ------------------------------ |
+| 🟣 READY     | Session prepared               |
+| 🔵 ASKING    | Question presented             |
+| 🟡 LISTENING | Waiting for candidate response |
+| 🟠 ANALYSING | Processing response            |
+| 🟢 ADAPTING  | Choosing what comes next       |
+| ⚪ COMPLETED  | Evaluation ready               |
+
+---
+
+# 🧠 Interview Memory
+
+InterviewOS maintains session-level memory so the interviewer can reason about the conversation instead of treating every answer as an isolated event.
+
+```text
+┌─────────────────────────────┐
+│       INTERVIEW MEMORY      │
+├─────────────────────────────┤
+│                             │
+│  ✓ Covered Topics           │
+│                             │
+│  ★ Strong Signals           │
+│                             │
+│  ⚠ Needs Probing            │
+│                             │
+│  ○ Not Assessed             │
+│                             │
+└─────────────────────────────┘
+```
+
+The session tracks:
+
+* Questions asked
+* Answers
+* Curriculum days covered
+* Topics
+* Difficulty
+* Answer quality
+* Follow-ups
+* Strengths
+* Gaps
+* Completion state
+
+---
+
+# 📚 Curriculum Intelligence
+
+InterviewOS uses the **31-day AI Cohort curriculum** as the foundation for interview context.
+
+Example topic progression:
+
+```text
+RAG
+ ↓
+Vector Databases
+ ↓
+Prompt Engineering
+ ↓
+Agentic AI
+ ↓
+MCP
+ ↓
+AI Deployment
+ ↓
+Production AI Systems
+```
+
+The candidate's learning journey is combined with curriculum context:
+
+```text
+31-Day Curriculum
+        ↓
+Candidate Mission History
+        ↓
+Completed / Attempted / Skipped
+        ↓
+Learning Signals
+        ↓
+Interview Context
+        ↓
+Question Selection
+        ↓
+Adaptive Follow-up
+        ↓
+Evaluation
+```
+
+---
+
+# 📊 Interview Progress
+
+Progress remains visible throughout the session.
+
+```text
+01 ✓
+02 ✓
+03 ✓
+04 ●
+05 ○
+06 ○
+07 ○
+08+
+```
+
+| Symbol | Meaning   |
+| ------ | --------- |
+| ✓      | Completed |
+| ●      | Current   |
+| ○      | Upcoming  |
+
+The API exposes:
+
+```text
+questionNumber
+questionsAsked
+minQuestions
+daysCovered
+minDays
+```
+
+### Completion Gate
+
+```text
+┌────────────────────────────┐
+│ Minimum Questions     ≥ 8  │
+│ Minimum Curriculum Days ≥4 │
+└────────────────────────────┘
+```
+
+---
+
+# 📈 Assessment Engine
+
+Once the interview is complete:
+
+```text
+Interview
     ↓
-Answer 01
+Answer History
     ↓
-Follow-up 01
+Performance Analysis
     ↓
-Answer 02
+Overall Score
     ↓
-Follow-up 02
+Scored Dimensions
     ↓
-New Curriculum Topic
+Strengths + Gaps
     ↓
-Question 03
-    ↓
-Answer 03
-    ↓
-Deeper Probe
-    ↓
-...
-    ↓
-Final Evaluation
+Learning Plan
 ```
 
-### Minimum interview target
+### Assessment
+
+```json
+{
+  "overallScore": 0,
+  "headline": "...",
+  "dimensions": [],
+  "learningPlan": []
+}
+```
+
+### Feedback
+
+```json
+{
+  "summary": "...",
+  "strengths": [],
+  "gaps": [],
+  "next": []
+}
+```
+
+Scores and feedback are derived from the actual answer history.
+
+---
+
+# 🎨 Dynamic UI & Motion
+
+InterviewOS is designed as a live interview command center.
+
+### Implemented dynamic behaviours
+
+* 🧠 Thinking / analysing indicator
+* ✨ Framer Motion transitions
+* 📊 Progress updates
+* 📚 Curriculum coverage updates
+* 🧠 Interview memory updates
+* 🔄 State-driven UI
+* 🎯 Completion transition
+* 📱 Responsive layout
+* 🪟 Glass / translucent surfaces
+* 🌌 Gradient accents
+
+### Motion philosophy
+
+> **Animation communicates system state — not decoration.**
 
 ```text
-8+ Questions
-     +
-4+ Curriculum Days
-     +
-Adaptive Follow-Ups
-     +
-Conversation Context
+QUESTION
+   ↓
+LISTENING
+   ↓
+ANALYSING
+   ↓
+DECIDING
+   ↓
+FOLLOW-UP
+   ↓
+CONTINUE
 ```
 
 ---
 
-# 📊 06 — INTERVIEW PROGRESS
+# 🏗️ Architecture
 
-The candidate can understand where they are in the interview.
+```mermaid
+flowchart TD
 
-```text
-             INTERVIEW PROGRESS
+    A["👤 Candidate"] --> B["🎨 React Frontend"]
 
-                  04 / 08+
+    B --> C["🧭 TanStack Router / Query"]
 
-        █████████████░░░░░░░
+    C --> D["POST /api/interview"]
 
-        TOPICS COVERED
+    D --> E["🗃️ Session Store"]
+    D --> F["🧠 Interview Engine"]
+    D --> G["💬 Provider Layer"]
 
-        ✓ RAG
-        ✓ Vector Databases
-        ✓ Prompt Engineering
-        → Agentic AI
-        ○ MCP
-        ○ Deployment
+    F --> H["📚 Curriculum Data"]
+    F --> I["👤 Candidate Data"]
+
+    E --> F
+    H --> F
+    I --> F
+
+    F --> J["🔄 Adaptive Decision"]
+
+    G --> J
+
+    J --> K["❓ Next Question / Follow-up"]
+
+    J --> L["📊 Structured Assessment"]
 ```
 
-The interface makes the interview journey visible instead of leaving the candidate wondering how much remains.
+### Architecture Principle
+
+The **deterministic interview engine controls the core behaviour**.
+
+The provider layer can help phrase the turn, while the core demo does not depend on an external API key for its deterministic interview behaviour.
 
 ---
 
-# 🏆 07 — FINAL EVALUATION
+# 🔁 Data Flow
 
-At the end of the conversation, the candidate receives structured feedback.
+```mermaid
+flowchart LR
 
-Instead of only:
+    A["Candidate Profile"]
+    B["Curriculum Context"]
+    C["Interview Session"]
+    D["Question"]
+    E["Candidate Answer"]
+    F["Processing"]
+    G["Follow-up Decision"]
+    H["Memory Update"]
+    I["Final Assessment"]
 
-```text
-Score: 72%
-```
-
-the experience can communicate:
-
-```text
-╭────────────────────────────────────╮
-│         INTERVIEW RESULTS          │
-│                                    │
-│               78                   │
-│              /100                  │
-│                                    │
-│   Technical Understanding          │
-│   ████████████████░░  82%          │
-│                                    │
-│   Communication                    │
-│   ██████████████░░░░  74%          │
-│                                    │
-│   System Thinking                  │
-│   █████████████░░░░░  69%          │
-│                                    │
-╰────────────────────────────────────╯
-```
-
----
-
-# 💎 STRENGTHS
-
-The final report highlights areas where the candidate performed well.
-
-```text
-✓ Strong conceptual understanding
-
-✓ Clear technical explanations
-
-✓ Good reasoning ability
-
-✓ Practical implementation awareness
+    A --> C
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> D
+    H --> I
 ```
 
 ---
 
-# ⚠️ AREAS TO IMPROVE
-
-The system also identifies areas that require additional preparation.
+# 🧩 System Components
 
 ```text
-→ Production scalability
-
-→ System design trade-offs
-
-→ Retrieval evaluation
-
-→ Failure handling
-
-→ Deeper architectural reasoning
-```
-
----
-
-# 🚀 ACTIONABLE FEEDBACK
-
-Feedback should lead somewhere.
-
-```text
-              INTERVIEW
-                  ↓
-              EVALUATION
-                  ↓
-            IDENTIFY GAPS
-                  ↓
-          ┌───────┴───────┐
-          ↓               ↓
-       STRENGTHS       WEAK AREAS
-          ↓               ↓
-       MAINTAIN        PRACTICE
-                          ↓
-                     RETRY TOPIC
-                          ↓
-                   IMPROVE SCORE
-```
-
-The interview therefore becomes part of the candidate's learning loop.
-
----
-
-# 🧩 CANDIDATE STATES
-
-The interface is designed to support different interview situations.
-
-### 🆕 New Candidate
-
-```text
-Welcome to InterviewOS.
-
-Your technical journey
-starts here. 🎙️
-```
-
-### 🧠 Active Interview
-
-```text
-Question 05 / 08
-
-Think carefully.
-Explain your reasoning.
-```
-
-### 🔥 Strong Performance
-
-```text
-You're demonstrating
-strong technical depth.
-
-Let's go deeper.
-```
-
-### ⚠️ Needs Improvement
-
-```text
-Let's break this concept down.
-
-Explain the core idea first.
-```
-
-### 🏁 Completed
-
-```text
-Interview complete.
-
-Your technical report is ready.
-```
-
----
-
-# 🎨 DESIGN LANGUAGE
-
-Task 2 uses a visual identity intentionally different from ABTalks.
-
-### Primary palette
-
-```text
-🟣 Violet
-🩷 Magenta
-🔵 Cyan
-⚫ Deep Black
-```
-
-### Visual principles
-
-* Dark AI-first interface
-* Violet gradients
-* Cyan highlights
-* Magenta interaction states
-* Glass-style surfaces
-* Soft glowing borders
-* High-contrast typography
-* Rounded UI elements
-* Conversational layouts
-* Motion-focused transitions
-
----
-
-# 🪄 VISUAL EXPERIENCE
-
-The interface is designed to feel like entering an AI-powered interview environment.
-
-```text
-        ✦          ·        ✧
-             ╭──────────╮
-        ·    │    AI    │     ·
-             │ INTERVIEW│
-        ✧    ╰────┬─────╯
-                   │
-             ┌─────▼─────┐
-             │ QUESTION  │
-             └─────┬─────┘
-                   │
-             ┌─────▼─────┐
-             │  ANSWER   │
-             └─────┬─────┘
-                   │
-              ✦ ANALYZE ✦
-                   │
-             ┌─────▼─────┐
-             │ FOLLOW-UP │
-             └───────────┘
-```
-
----
-
-# 🛠️ TECH STACK
-
-| Technology         | Purpose                          |
-| ------------------ | -------------------------------- |
-| ⚛️ React           | Frontend application             |
-| 🔷 TypeScript      | Type-safe development            |
-| ⚡ Vite             | Development and build tooling    |
-| 🎨 Tailwind CSS    | Styling system                   |
-| 🧩 shadcn/ui       | Reusable interface components    |
-| ✨ Lucide React     | Interface icons                  |
-| 🎬 Motion          | UI transitions and interactions  |
-| 💾 Client State    | Interview/session state          |
-| 📦 Structured Data | Curriculum and candidate context |
-
----
-
-# 🏗️ ARCHITECTURE
-
-```text
-                         INTERVIEWOS AI
-                                │
-                                ▼
-                    ┌─────────────────────┐
-                    │   REACT INTERFACE   │
-                    └──────────┬──────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-        Candidate          Interview         Progress
-         Context            Session           Tracking
-             │                 │                 │
-             └─────────────────┼─────────────────┘
-                               ▼
-                    ┌─────────────────────┐
-                    │ INTERVIEW CONTEXT   │
-                    └──────────┬──────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-        Curriculum          Questions        Answers
-             │                 │                 │
-             └─────────────────┼─────────────────┘
-                               ▼
-                    ┌─────────────────────┐
-                    │  ADAPTIVE ENGINE    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   NEXT QUESTION     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                          CANDIDATE
-                               │
-                               └─────────── 🔄
-```
-
----
-
-# 🔬 INTERVIEW ENGINE
-
-The core interview loop can be represented as:
-
-```text
-┌───────────────┐
-│ SELECT TOPIC  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ ASK QUESTION  │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ GET ANSWER    │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ ANALYZE       │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ UPDATE        │
-│ CONTEXT       │
-└───────┬───────┘
-        ↓
-┌───────────────┐
-│ SELECT NEXT   │
-│ QUESTION      │
-└───────┬───────┘
-        │
-        └───────────────► LOOP
-```
-
----
-
-# 🗺️ USER JOURNEY
-
-```text
-                    START
-                      │
-                      ▼
-              ┌───────────────┐
-              │ Landing Page  │
-              └───────┬───────┘
-                      ▼
-              ┌───────────────┐
-              │ Candidate     │
-              │ Context       │
-              └───────┬───────┘
-                      ▼
-              ┌───────────────┐
-              │ Start         │
-              │ Interview     │
-              └───────┬───────┘
-                      ▼
-              ┌───────────────┐
-              │ Technical     │
-              │ Question      │
-              └───────┬───────┘
-                      ▼
-              ┌───────────────┐
-              │ Candidate     │
-              │ Answer        │
-              └───────┬───────┘
-                      ▼
-              ┌───────────────┐
-              │ Adaptive      │
-              │ Follow-up     │
-              └───────┬───────┘
-                      │
-                      └─────── 🔄
-                              │
-                              ▼
-                     ┌────────────────┐
-                     │ Final Feedback │
-                     └────────────────┘
-```
-
----
-
-# 🗂️ FEATURE MAP
-
-```text
-INTERVIEWOS
+InterviewOS AI
 │
-├── 🎙️ Interview Experience
-│   ├── Question Flow
-│   ├── Answer Input
-│   ├── Progress
-│   └── Follow-Ups
+├── Candidate Experience
+│   ├── Landing
+│   ├── Candidate Selection
+│   ├── Interview Workspace
+│   └── Feedback
 │
-├── 🧠 Intelligence
-│   ├── Context
-│   ├── Curriculum
-│   ├── Response Analysis
-│   └── Question Adaptation
+├── Interview Engine
+│   ├── Question Selection
+│   ├── Answer Analysis
+│   ├── Follow-up Logic
+│   ├── Context Probes
+│   └── Completion Gates
 │
-├── 📊 Evaluation
-│   ├── Performance
-│   ├── Strengths
-│   ├── Weaknesses
-│   └── Recommendations
+├── Interview Memory
+│   ├── Covered Topics
+│   ├── Strong Signals
+│   ├── Needs Probing
+│   └── Not Assessed
 │
-└── 🎨 Experience
-    ├── Responsive UI
-    ├── Motion
-    ├── States
-    └── Accessibility
+├── Curriculum Intelligence
+│   ├── Candidate Journey
+│   ├── Curriculum Days
+│   └── Topic Context
+│
+└── Assessment
+    ├── Overall Score
+    ├── Dimensions
+    ├── Strengths
+    ├── Gaps
+    └── Learning Plan
 ```
 
 ---
 
-# 🗺️ ROUTE MAP
+# ⚙️ Tech Stack
 
-```text
-/
-│
-├── Landing / Interview Introduction
-│
-├── Interview Experience
-│
-└── Results / Feedback
-```
-
-The exact routes available in the implementation should be treated as the source of truth.
+| Technology          | Purpose                          |
+| ------------------- | -------------------------------- |
+| ⚛️ React 19         | UI runtime                       |
+| 🔷 TypeScript       | Type-safe application code       |
+| ⚡ Vite              | Development and production build |
+| 🧭 TanStack Start   | Full-stack React framework       |
+| 🛣️ TanStack Router | File-based routing               |
+| 🔄 TanStack Query   | Client data / mutation layer     |
+| 🎨 Tailwind CSS 4   | Styling system                   |
+| 🧱 Radix UI         | Accessible primitives            |
+| ✨ shadcn/ui         | UI component system              |
+| 🎬 Framer Motion    | Motion and transitions           |
+| 🛡️ Zod             | Request / schema validation      |
+| 🖊️ Lucide React    | Icons                            |
+| 🚀 Nitro            | Server runtime                   |
 
 ---
 
-# 📂 PROJECT STRUCTURE
+# 📁 Project Structure
+
+<details>
+<summary><strong>📂 Click to expand</strong></summary>
 
 ```text
 VicoDathon-pb-2/
-│
 ├── .lovable/
-│
+├── data/
+│   ├── candidates.json
+│   └── curriculum.json
 ├── public/
-│
 ├── src/
 │   ├── components/
-│   ├── pages/
+│   │   ├── interview/
+│   │   │   ├── AnswerComposer.tsx
+│   │   │   ├── CandidateCard.tsx
+│   │   │   ├── CurriculumCoverage.tsx
+│   │   │   ├── FeedbackScore.tsx
+│   │   │   ├── FeedbackSection.tsx
+│   │   │   ├── InterviewHeader.tsx
+│   │   │   ├── InterviewMemoryPanel.tsx
+│   │   │   ├── InterviewMessage.tsx
+│   │   │   ├── InterviewProgress.tsx
+│   │   │   ├── LearningPlan.tsx
+│   │   │   └── ThinkingIndicator.tsx
+│   │   └── ui/
+│   ├── data/
+│   │   ├── candidates.json
+│   │   └── curriculum.json
 │   ├── hooks/
+│   │   └── use-mobile.tsx
 │   ├── lib/
-│   └── ...
-│
-├── PROMPTS.md
+│   │   ├── interview/
+│   │   │   ├── client.ts
+│   │   │   ├── data.ts
+│   │   │   ├── engine.ts
+│   │   │   ├── provider.server.ts
+│   │   │   ├── questions.ts
+│   │   │   └── session-store.server.ts
+│   │   ├── error-capture.ts
+│   │   ├── error-page.ts
+│   │   ├── lovable-error-reporting.ts
+│   │   └── utils.ts
+│   ├── routes/
+│   │   ├── api/
+│   │   │   └── interview.ts
+│   │   ├── __root.tsx
+│   │   ├── candidates.tsx
+│   │   ├── feedback.tsx
+│   │   ├── index.tsx
+│   │   ├── interview.tsx
+│   │   └── README.md
+│   ├── types/
+│   ├── routeTree.gen.ts
+│   ├── router.tsx
+│   ├── server.ts
+│   ├── start.ts
+│   └── styles.css
 ├── AGENTS.md
+├── PROMPTS.md
+├── technical-spec.md
 ├── package.json
-├── vite.config.ts
-├── tsconfig.json
+├── bun.lock
+├── bunfig.toml
 ├── components.json
+├── eslint.config.js
+├── tsconfig.json
+├── vite.config.ts
 └── README.md
+```
+
+</details>
+
+---
+
+# 🔌 API Documentation
+
+## `POST /api/interview`
+
+```text
+Content-Type: application/json
+```
+
+### Start Session
+
+```json
+{
+  "sessionId": "unique-session-id",
+  "candidate": {
+    "id": "sarah-chen"
+  }
+}
+```
+
+### Subsequent Turn
+
+```json
+{
+  "sessionId": "unique-session-id",
+  "message": "candidate answer"
+}
 ```
 
 ---
 
-# ⚙️ RUN LOCALLY
+## 🟢 In-Progress Response
 
-### Clone
+```text
+HTTP 200
+```
+
+Contains:
+
+```text
+sessionId
+reply
+done: false
+
+question
+├── id
+├── text
+├── day
+├── dayTitle
+├── topic
+├── level
+└── kind
+
+progress
+├── questionNumber
+├── questionsAsked
+├── minQuestions
+├── daysCovered
+└── minDays
+
+memory
+├── covered
+├── strongSignals
+├── needsProbing
+└── notAssessed
+
+candidate
+├── id
+├── name
+├── title
+└── avatarInitials
+
+engine
+```
+
+---
+
+## 🏁 Completed Response
+
+```text
+HTTP 200
+```
+
+When the completion gates are satisfied:
+
+```json
+{
+  "done": true,
+  "feedback": {
+    "summary": "...",
+    "strengths": [],
+    "gaps": [],
+    "next": []
+  },
+  "assessment": {
+    "overallScore": 0,
+    "headline": "...",
+    "dimensions": [],
+    "learningPlan": []
+  }
+}
+```
+
+---
+
+# 🛡️ Error Handling
+
+|  HTTP | Error               |
+| ----: | ------------------- |
+| `400` | `invalid_json`      |
+| `400` | `invalid_request`   |
+| `400` | `empty_answer`      |
+| `404` | `invalid_session`   |
+| `404` | `missing_candidate` |
+| `500` | `engine_error`      |
+
+### Error Shape
+
+```json
+{
+  "error": "code",
+  "message": "human readable"
+}
+```
+
+---
+
+# 🧪 Testing
+
+## Core Flow
+
+```text
+Landing (/)
+      ↓
+Candidate Selection (/candidates)
+      ↓
+Interview Workspace (/interview)
+      ↓
+Answer
+      ↓
+POST /api/interview
+      ↓
+Analysis
+      ↓
+Adaptive Follow-up
+      ↓
+Repeat
+      ↓
+≥ 8 Questions
+      ↓
+≥ 4 Curriculum Days
+      ↓
+Feedback / Assessment (/feedback)
+```
+
+### API Verification
+
+1. Start with a candidate ID.
+2. Create a stable `sessionId`.
+3. Submit successive answers.
+4. Confirm question progress.
+5. Confirm `daysCovered`.
+6. Confirm follow-up behaviour.
+7. Confirm memory updates.
+8. Confirm completed payload when gates are met.
+
+---
+
+# 💻 Run Locally
+
+### 1. Clone
 
 ```bash
 git clone https://github.com/dhanush080607/VicoDathon-pb-2.git
-```
-
-### Enter the project
-
-```bash
 cd VicoDathon-pb-2
 ```
 
-### Install dependencies
+### 2. Install
+
+Using Bun:
+
+```bash
+bun install
+```
+
+Or npm:
 
 ```bash
 npm install
 ```
 
-### Start development server
+### 3. Development
+
+```bash
+bun run dev
+```
+
+Or:
 
 ```bash
 npm run dev
 ```
 
-### Open locally
+### 4. Build
+
+```bash
+bun run build
+```
+
+### 5. Preview
+
+```bash
+bun run preview
+```
+
+Open the URL printed by the development server.
+
+Typically:
 
 ```text
 http://localhost:5173
 ```
 
+> No external API keys are required for the core deterministic interview engine.
+
 ---
 
-# 🧪 HACKATHON VALIDATION
+# 🏆 Hackathon Requirements
 
-The challenge requires the interview experience to support:
+<div align="center">
+
+| Requirement                                     | Status |
+| ----------------------------------------------- | :----: |
+| Conversational technical interview              |    ✅   |
+| Minimum of 8 questions                          |    ✅   |
+| Cover at least 4 different curriculum days      |    ✅   |
+| Follow-up questions based on previous responses |    ✅   |
+| Maintain conversation context                   |    ✅   |
+| Produce structured feedback                     |    ✅   |
+| Required `POST /api/interview` endpoint         |    ✅   |
+
+</div>
+
+---
+
+# 🎯 Problem Statement
+
+## VicoDathon — Problem Statement 2
+
+### **The Interview Agent**
+
+The challenge is not simply to build an interview.
+
+It is to build the **interviewer**.
+
+InterviewOS addresses this through:
 
 ```text
-┌──────────────────────────────────────┐
-│ REQUIREMENT                  STATUS   │
-├──────────────────────────────────────┤
-│ Conversational Interview       ✅     │
-│ Minimum 8 Questions            ✅     │
-│ 4+ Curriculum Days             ✅     │
-│ Intelligent Follow-Ups         ✅     │
-│ Conversation Context           ✅     │
-│ Structured Feedback            ✅     │
-│ Personalized Interview         ✅     │
-│ Required API Endpoint          ✅     │
-└──────────────────────────────────────┘
+LISTEN
+  +
+UNDERSTAND
+  +
+REMEMBER
+  +
+ADAPT
+  +
+PROBE
+  +
+EVALUATE
 ```
 
-> **Note:** Verify the final API behavior and exact implementation against the supplied Technical Specification before submission.
+---
+
+# 🤖 AI Usage
+
+AI-assisted development was documented throughout the project.
+
+The development log covers:
+
+* Planning
+* Data foundation
+* API implementation
+* Adaptive engine
+* Follow-up logic
+* Context handling
+* Provider abstraction
+* Feedback system
+* UI development
+* Verification
+
+### Full AI Development Log
+
+[View PROMPTS.md →](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)
+
+> No secrets or API keys are stored in the repository.
 
 ---
 
-# 📜 AI DEVELOPMENT LOG
+# 📸 Screenshots
 
-AI-assisted development is documented separately in:
+Add actual application screenshots here.
 
-### `PROMPTS.md`
-
-The file records the development prompts used during the build process.
-
-This provides transparency into the AI-assisted development workflow required by the hackathon.
-
-**[View PROMPTS.md →](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)**
-
----
-
-# 📈 DEVELOPMENT HISTORY
-
-The repository was developed iteratively rather than being presented as a single final code dump.
+Recommended structure:
 
 ```text
-IDEA
- ↓
-UI
- ↓
-INTERVIEW FLOW
- ↓
-CONTEXT
- ↓
-ADAPTATION
- ↓
-FEEDBACK
- ↓
-POLISH
- ↓
-DEPLOYMENT
+docs/
+└── screenshots/
+    ├── landing.png
+    ├── candidates.png
+    ├── interview.png
+    ├── memory.png
+    └── feedback.png
 ```
 
-### Full development history
+### Landing Page
 
-**[📜 View Commit History →](https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/)**
+```html
+<!-- Replace with actual screenshot -->
+
+<img
+  src="./docs/screenshots/landing.png"
+  width="900"
+  alt="InterviewOS AI Landing Page"
+/>
+```
+
+### Candidate Selection
+
+```html
+<!-- Replace with actual screenshot -->
+
+<img
+  src="./docs/screenshots/candidates.png"
+  width="900"
+  alt="InterviewOS AI Candidate Selection"
+/>
+```
+
+### Interview Workspace
+
+```html
+<!-- Replace with actual screenshot -->
+
+<img
+  src="./docs/screenshots/interview.png"
+  width="900"
+  alt="InterviewOS AI Interview Workspace"
+/>
+```
+
+### Interview Memory
+
+```html
+<!-- Replace with actual screenshot -->
+
+<img
+  src="./docs/screenshots/memory.png"
+  width="900"
+  alt="InterviewOS AI Memory Panel"
+/>
+```
+
+### Feedback & Assessment
+
+```html
+<!-- Replace with actual screenshot -->
+
+<img
+  src="./docs/screenshots/feedback.png"
+  width="900"
+  alt="InterviewOS AI Feedback"
+/>
+```
 
 ---
 
-# 🛣️ ROADMAP
+# 🎬 Recommended Demo GIF
 
-## 🧠 Interview Intelligence
+For maximum visual impact, add a short real screen recording here.
 
-* [x] Technical interview experience
-* [x] Multi-turn conversation flow
-* [x] Context-aware questioning
-* [x] Follow-up question experience
-* [x] Structured feedback
-* [ ] Advanced response scoring
-* [ ] Dynamic difficulty adjustment
-* [ ] Interviewer personality modes
-
----
-
-## 📚 Learning Intelligence
-
-* [x] Curriculum-aware interview concept
-* [x] Candidate journey concept
-* [ ] Skill-gap detection
-* [ ] Personalized revision plan
-* [ ] Recommended learning resources
-* [ ] Interview replay
-
----
-
-## 🎙️ Advanced Interview Modes
-
-* [ ] System design interviews
-* [ ] Coding interviews
-* [ ] Architecture interviews
-* [ ] Behavioral interviews
-* [ ] Voice-based interviews
-* [ ] Real-time AI conversation
-
----
-
-## 📊 Candidate Analytics
-
-* [ ] Interview history
-* [ ] Skill progression
-* [ ] Topic-level analytics
-* [ ] Confidence tracking
-* [ ] Interview benchmarking
-
----
-
-# 🔐 PROJECT SCOPE
-
-This hackathon project focuses on demonstrating the **AI interview experience**.
-
-The challenge does not require:
-
-* ❌ Voice interaction
-* ❌ User authentication
-* ❌ Persistent user accounts
-* ❌ Long-term conversation history
-* ❌ Mobile application
-
-The project therefore focuses its effort on the core experience:
+Recommended flow:
 
 ```text
-Candidate
-    ↓
-Context
-    ↓
-Interview
-    ↓
-Follow-Up
-    ↓
-Evaluation
-    ↓
+Candidate Selection
+        ↓
+Interview Question
+        ↓
+Candidate Answer
+        ↓
+AI Thinking
+        ↓
+Adaptive Follow-up
+        ↓
+Progress Update
+        ↓
 Feedback
 ```
 
----
+Recommended file:
 
-# 🌐 PROJECT LINKS
+```text
+docs/demo.gif
+```
 
-### 🚀 Live Application
+Then add:
 
-**https://vico-dathon-pb-2.vercel.app/**
+```html
+<div align="center">
 
-### 💻 GitHub Repository
+<img
+  src="./docs/demo.gif"
+  width="900"
+  alt="InterviewOS AI Demo"
+/>
 
-**https://github.com/dhanush080607/VicoDathon-pb-2**
-
-### 📜 Commit History
-
-**https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/**
-
-### 🤖 AI Prompt Log
-
-**[PROMPTS.md](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)**
-
-### 👤 LinkedIn
-
-**[H Dhanush](https://www.linkedin.com/in/h-dhanush-189565327/)**
+</div>
+```
 
 ---
 
-# 👨‍💻 BUILT BY
+# ♿ Performance & Accessibility
+
+InterviewOS includes:
+
+* Responsive layouts
+* Mobile-aware hooks
+* Semantic controls
+* Keyboard-reachable actions
+* Focus-friendly interactions
+* Type-safe request validation
+* Efficient client transitions
+* Clear loading states
+* Clear thinking states
+
+---
+
+# 🗺️ Roadmap
+
+## ✅ Completed
+
+* Adaptive multi-turn interview engine
+* Curriculum-aware question selection
+* Candidate-aware question selection
+* Session state
+* Conversation context
+* Follow-up questions
+* Context probes
+* Progress tracking
+* Curriculum coverage
+* Interview memory
+* Structured feedback
+* Learning plan
+* `POST /api/interview`
+* Premium dark interview UI
+* Motion and transitions
+* Responsive layout
+
+## 🚧 Future
+
+* Persistent session storage
+* Additional candidate profiles
+* Expanded curriculum
+* Deeper answer-quality analytics
+* Optional live voice interface
+* Exportable interview reports
+
+---
+
+# 📜 Development History
+
+The project was developed iteratively during the VicoDathon hackathon.
+
+View the complete repository history:
+
+### [📈 View Commit History →](https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/)
+
+---
+
+# 🔗 Important Links
+
+<div align="center">
+
+|    | Resource                                                                                                |
+| -- | ------------------------------------------------------------------------------------------------------- |
+| 🚀 | [Live Demo](https://vico-dathon-pb-2.vercel.app/)                                                       |
+| 💻 | [GitHub Repository](https://github.com/dhanush080607/VicoDathon-pb-2)                                   |
+| 📜 | [Technical Specification](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/technical-spec.md) |
+| 🤖 | [AI Usage Log](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)                   |
+| 📈 | [Commit History](https://github.com/dhanush080607/VicoDathon-pb-2/commits/main/)                        |
+| 👤 | [LinkedIn](https://www.linkedin.com/in/h-dhanush-189565327/)                                            |
+
+</div>
+
+---
+
+# 👨‍💻 Built By
+
+<div align="center">
 
 ## H Dhanush
 
-**CSE — Data Science**
+### CSE — Data Science
 
-Frontend Developer • UI Designer • AI/ML Enthusiast
+**Frontend Developer • UI Designer • AI/ML Enthusiast**
 
----
+<br/>
 
-# ❤️ THE BIG IDEA
+<a href="https://www.linkedin.com/in/h-dhanush-189565327/">
+<img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
 
-Most interview platforms ask:
-
-> **"Can you answer this question?"**
-
-InterviewOS asks:
-
-> **"Can you explain why?"**
-
-Then:
-
-> **"What happens if your approach fails?"**
-
-Then:
-
-> **"How would you build it for production?"**
-
-That's the difference between:
-
-```text
-          QUESTION BANK
-               ❌
-                │
-                ▼
-         FIXED QUESTIONS
-                │
-                ▼
-          FIXED ANSWERS
-```
-
-and:
-
-```text
-             INTERVIEWOS
-                  │
-                  ▼
-             YOUR JOURNEY
-                  │
-                  ▼
-             YOUR ANSWER
-                  │
-                  ▼
-           AI UNDERSTANDS
-                  │
-                  ▼
-          AI CHALLENGES YOU
-                  │
-                  ▼
-          AI GIVES FEEDBACK
-                  │
-                  ▼
-          YOU GET BETTER
-```
-
----
-
-# 🎙️ INTERVIEWOS AI
-
-## **Don't memorize the interview.**
-
-## **Learn how to think through it.**
+</div>
 
 ---
 
 <div align="center">
 
-### 🟣 Learn • Explain • Defend • Improve
+# 🎙️ InterviewOS AI
 
-### Built for **VicoDathon — Problem Statement 2**
-
-**H Dhanush • CSE — Data Science**
+### **Don't Build the Interview. Build the Interviewer.**
 
 <br/>
 
-[🚀 Live Demo](https://vico-dathon-pb-2.vercel.app/)
-[💻 GitHub](https://github.com/dhanush080607/VicoDathon-pb-2)
-[🤖 PROMPTS.md](https://github.com/dhanush080607/VicoDathon-pb-2/blob/main/PROMPTS.md)
+```text
+LISTEN
+   ↓
+UNDERSTAND
+   ↓
+ADAPT
+   ↓
+PROBE
+   ↓
+EVALUATE
+   ↓
+IMPROVE
+```
+
+<br/>
+
+### 🚀 Built for VicoDathon Hackathon
+
+**Problem Statement 2 — The Interview Agent**
+
+<br/>
+
+> **Real interviews don't follow scripts.**
+
+<br/>
+
+⭐ If you find the project interesting, consider giving the repository a star.
 
 </div>
